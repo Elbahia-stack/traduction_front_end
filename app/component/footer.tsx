@@ -52,11 +52,11 @@ const footerStyle = {
 };
 
 const containerStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  flexWrap: "wrap",
-  maxWidth: "1200px",
-  margin: "0 auto",
+  display: 'flex',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap' as React.CSSProperties['flexWrap'],
+  maxWidth: '1000px',
+  margin: '0 auto',
 };
 
 const logoStyle = {
