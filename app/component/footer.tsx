@@ -51,12 +51,12 @@ const footerStyle = {
   fontFamily: "Arial, sans-serif",
 };
 
-const containerStyle: React.CSSProperties = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  flexWrap: 'wrap',      // OK pour React.CSSProperties
-  maxWidth: '1200px',
-  margin: '0 auto',
+const containerStyle = {
+  display: "flex",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  maxWidth: "1200px",
+  margin: "0 auto",
 };
 
 const logoStyle = {
