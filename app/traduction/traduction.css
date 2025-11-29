@@ -1,0 +1,145 @@
+/* CONTAINER PRINCIPAL */
+.tr_container {
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← ici */
+  background: linear-gradient(135deg, rgba(18, 18, 17, 0.922), rgba(38, 42, 43, 0.078)),
+              url('/images/img1.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.tr_title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #0e31db, #b70a72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* CONTAINER BOUTONS */
+.tr_buttons {
+  display: flex;
+  justify-content: center; /* centre les boutons */
+  align-items: center;     /* aligne verticalement */
+  gap: 20px;               /* espace entre les boutons */
+  margin-bottom: 20px;
+  flex-wrap: nowrap;       /* empêche de passer à la ligne */
+}
+
+/* BOUTON SWITCH (icône uniquement) */
+.switch_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #130983;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.switch_btn:hover {
+  background-color: #3b8da1;
+  transform: rotate(90deg);
+}
+
+.switch_btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* BOUTON TRADUIRE */
+.translate_btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #130983;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.translate_btn:hover {
+  background-color: #153a66;
+}
+
+/* CONTAINER SPLIT VIEW */
+.tr_split {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* passe en colonne sur petit écran */
+}
+
+/* CHAQUE ZONE */
+.tr_area {
+  flex: 1;
+  min-width: 300px; /* éviter que ça devienne trop petit */
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL LANGUE */
+.tr_label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #211bdb;
+}
+
+/* TEXTAREA */
+.tr_textarea {
+  width: 100%;
+  min-height: 250px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #100e0c;
+  color: rgb(228, 235, 240);
+  font-size: 20px;
+  resize: none;
+  background: #53616463;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.tr_textarea:focus {
+  border-color: #1d4e89;
+  box-shadow: 0 0 8px rgba(29, 78, 137, 0.3);
+}
+
+/* MESSAGES D’ERREUR */
+.tr_error {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* RESPONSIVE - petits écrans */
+@media (max-width: 768px) {
+  .tr_split {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tr_buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

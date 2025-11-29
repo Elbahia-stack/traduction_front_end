@@ -1,0 +1,116 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #000000;
+  color: rgba(241, 242, 239, 0.961);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links li a, .nav-links li button {
+  color: rgb(19, 19, 194);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.nav-links li button:hover, .nav-links li a:hover {
+  background-color: #2d2c45;
+}
+
+.btn-signup {
+  background-color: #121412;
+  font-weight: bold;
+}
+
+.btn-signin {
+  background-color: #165440;
+  margin-left: 10px;
+  font-weight: bold;
+}
+ .description-section{
+    width: 100%;               /* largeur du div */
+    height: 400px;             /* hauteur du div */
+   /* chemin de l'image */
+    background-size: cover;    /* couvre tout le div */
+    background-position: center; /* centre l'image */
+    background-repeat: no-repeat; /* ne répète pas l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* texte en blanc */
+  }
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f6f5f5;
+  }
+
+.description-text {
+  max-width: 500px;
+}
+
+.description-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.description-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.about-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #e5e7eb;
+}
+
+.about-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.languages-section {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.languages-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dome-container {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}

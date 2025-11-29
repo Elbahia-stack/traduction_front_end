@@ -1,0 +1,84 @@
+/* PAGE ENTIÈRE */
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/bg3.jpg'); /* change l'image */
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(3px); /* optionnel : effet flou */
+}
+
+/* CONTENEUR DU FORMULAIRE */
+.login-box {
+  width: 380px;
+  padding: 30px;
+  background:  rgba(185, 178, 219, 0.575);
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* TITRE */
+.login-box h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* INPUTS */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #4c84ff;
+  box-shadow: 0 0 5px #4c84ff;
+}
+
+/* BOUTON */
+.login-box button {
+  width: 70%;
+  padding: 14px;
+  background: #361ad5;
+  color: white;
+  font-size: 18px;
+  border: none;
+  margin: 10px auto;   /* <-- centre le bouton */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;      /* <-- permet le centrage */
+}
+
+
+
+.login-box button:hover {
+  background: #3366ff;
+}
+
+/* TEXTE CRÉER UN COMPTE */
+.create-link {
+  margin-top: 15px;
+  display: block;
+  font-size: 15px;
+  color: #ada8a8;
+}
+
+.create-link a {
+  color: #4c84ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.create-link a:hover {
+  text-decoration: underline;
+}
