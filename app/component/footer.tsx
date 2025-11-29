@@ -51,11 +51,11 @@ const footerStyle = {
   fontFamily: "Arial, sans-serif",
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
-  flexWrap: 'wrap' as React.CSSProperties['flexWrap'],
-  maxWidth: '1000px',
+  flexWrap: 'wrap',      // OK pour React.CSSProperties
+  maxWidth: '1200px',
   margin: '0 auto',
 };
 
