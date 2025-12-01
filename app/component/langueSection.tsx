@@ -1,8 +1,14 @@
 "use client";
 import React from "react";
 
-// Liste des langues avec drapeaux CDN
-const languages = [
+// Définition d'un type pour les langues
+interface Language {
+  name: string;
+  flag: string;
+}
+
+// Liste des langues
+const languages: Language[] = [
   { name: "Français", flag: "https://flagcdn.com/w80/fr.png" },
   { name: "Anglais", flag: "https://flagcdn.com/w80/gb.png" },
   { name: "Espagnol", flag: "https://flagcdn.com/w80/es.png" },
@@ -26,8 +32,8 @@ const languages = [
   { name: "Tchèque", flag: "https://flagcdn.com/w80/cz.png" },
 ];
 
-// Regrouper par lignes (7 boules par ligne)
-const rows = [];
+// Regrouper par lignes (7 éléments par ligne)
+const rows: Language[][] = [];
 for (let i = 0; i < languages.length; i += 7) {
   rows.push(languages.slice(i, i + 7));
 }
@@ -57,20 +63,27 @@ export default function LanguagesSection() {
                 alignItems: "center",
               }}
             >
-              {/* Drapeau comme boule */}
+              {/* Boule drapeau */}
               <img
                 src={lang.flag}
                 alt={lang.name}
                 style={{
                   width: "60px",
                   height: "60px",
-                  borderRadius: "50%", // cercle
+                  borderRadius: "50%",
                   objectFit: "cover",
                   marginBottom: "0.5rem",
                 }}
               />
-              {/* Nom sous le drapeau */}
-              <span style={{ fontSize: "0.9rem", color: "#333", textAlign: "center" }}>
+
+              {/* Nom */}
+              <span
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#333",
+                  textAlign: "center",
+                }}
+              >
                 {lang.name}
               </span>
             </div>
@@ -78,22 +91,40 @@ export default function LanguagesSection() {
         </div>
       ))}
 
-      {/* Animations CSS */}
+      {/* Animations */}
       <style jsx>{`
         @keyframes subtleMove0 {
-          0% { transform: translateX(0); }
-          50% { transform: translateX(14px); }
-          100% { transform: translateX(0); }
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(14px);
+          }
+          100% {
+            transform: translateX(0);
+          }
         }
         @keyframes subtleMove1 {
-          0% { transform: translateX(0); }
-          50% { transform: translateX(14px); }
-          100% { transform: translateX(0); }
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(14px);
+          }
+          100% {
+            transform: translateX(0);
+          }
         }
         @keyframes subtleMove2 {
-          0% { transform: translateX(0); }
-          50% { transform: translateX(14px); }
-          100% { transform: translateX(0); }
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(14px);
+          }
+          100% {
+            transform: translateX(0);
+          }
         }
       `}</style>
     </div>

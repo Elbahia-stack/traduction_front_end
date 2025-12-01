@@ -43,7 +43,25 @@ export default function Traduction() {
       setResult(data.translated);
       setError("");
     } catch (err) {
-      setError(err.detail || "Erreur lors de la traduction");
+      let message = "Erreur lors de la traduction";
+
+      if (err instanceof Error && err.message) {
+        message = err.message;
+      } else if (typeof err === "string") {
+        message = err;
+      } else if (err && typeof err === "object" && "detail" in err) {
+        // try to read detail from the error-like object
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        message = (err as any).detail || message;
+      } else {
+        try {
+          message = JSON.stringify(err) || message;
+        } catch {
+          // keep default message
+        }
+      }
+
+      setError(message);
     }
   };
 

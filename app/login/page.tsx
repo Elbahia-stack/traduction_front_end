@@ -33,9 +33,16 @@ export default function Login() {
       // 🚀 Redirection après login réussi
       router.push("/traduction");
 
-    } catch (err) {
-      setMessage(err.detail || "Erreur lors du login");
-    }
+} catch (err) {
+  // Safely handle unknown error shape
+  if (err && typeof err === "object" && "detail" in err) {
+    setMessage((err as { detail?: string }).detail || "Erreur lors du login");
+  } else if (err instanceof Error) {
+    setMessage(err.message);
+  } else {
+    setMessage("Erreur lors du login");
+  }
+}
   };
 
   return (
@@ -60,7 +67,7 @@ export default function Login() {
         <button onClick={loginUser}>Se connecter</button>
 
         <p className="create-link">
-          Vous n'avez pas de compte ?
+          Vous n avez pas de compte ?
           <a href="/registre"> Créer un compte</a>
         </p>
 
